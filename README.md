@@ -1,4 +1,4 @@
-# dataHelpers
+# helpers_data
 
 JS library data manipulation
 
@@ -7,32 +7,19 @@ JS library data manipulation
 ### Source code
 https://github.com/tactik8/dataHelpers
 
-### repl.it
-https://replit.com/@tactik8/dataHelpers
+
 
 
 ## Install
 
 ### From github
 ```
-git clone https://github.com/tactik8/dataHelpers ./utils/dataHelpers
+npm install github:tactik8/helpers_data
+
 ```
 
 ## Test and publish
 
-```
-npm install --save-dev jest
-
-npm install --save-dev babel-jest @babel/core @babel/preset-env
-npm install --save-dev jest-environment-jsdom
-
-node --experimental-vm-modules node_modules/.bin/jest
-
-npx parcel build
-npm adduser
-npm publish
-
-```
 
 
 

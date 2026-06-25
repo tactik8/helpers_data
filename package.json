@@ -1,14 +1,27 @@
-
 {
   "name": "helpers_data",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "description": "Helpers methods for data",
+  "license": "ISC",
+  "author": "",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/.bin/jest",
-    "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch",
-    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage"
-  },
-  "devDependencies": {
-    "jest": "^29.0.0"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "build": "rm -rf dist && npm run build:cjs && npm run build:esm",
+    "build:cjs": "npx esbuild src/index.js --bundle --minify --platform=node --packages=external --format=cjs --outfile=dist/index.cjs",
+    "build:esm": "npx esbuild src/index.js --bundle --minify --platform=node --packages=external --format=esm --outfile=dist/index.js",
+    "dev": "node src/index.js",
+    "start": "node dist/index.js"
   }
 }
