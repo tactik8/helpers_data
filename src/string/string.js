@@ -1,5 +1,5 @@
 
-import { nullService } from "../null/null.service.js";
+import { nullService } from "../null/null.js";
 
 export const stringService = {
     isValid: isValid,

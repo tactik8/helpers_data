@@ -1,7 +1,7 @@
 import {jest} from '@jest/globals'
 
 
-import { arrayService } from '../../src/array/array.service.js';
+import { arrayService } from '../../src/array/array.js';
 
 describe('arrayService.isArray', () => {
     test('should return true for valid arrays', () => {
