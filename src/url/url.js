@@ -1,6 +1,6 @@
 
 
-import { krakenNullHelpers} from './krakenNullHelpers.js'
+import { nullService } from '../null/null.js'
 
 export const urlService = {
 
@@ -27,7 +27,7 @@ function isValid(value){
     if(value instanceof URL) { return true }
 
 
-    return krakenNullHelpers.isNotNull(getUrl(value))
+    return nullService.isNotNull(getUrl(value))
 
 }
 
